@@ -1,0 +1,22 @@
+.fill {
+    height: 10%;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+}
+
+.custom-snackbar {
+    top: 100px;
+    background-color: aqua;
+    bottom: 50px;
+}
