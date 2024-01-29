@@ -1,0 +1,8 @@
+<div class="comment">
+    <div class="head">
+        <h1 class="user link" [routerLink]="['/user/' + username]">{{username}}</h1>
+        <app-manage-comment *ngIf="options" [id]="id" class="options"></app-manage-comment>
+    </div>
+    <p class="text">{{comment}}</p>
+    <p class="date" >{{date}}</p>
+</div>

@@ -1,0 +1,45 @@
+.comment {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+
+    width: 50%;
+    max-width: 1000px;
+
+    margin: auto;
+
+    border: 3px solid #ffa200;
+    border-radius: 5px;
+
+    margin-top: 10px;
+}
+
+.head {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.user {
+    font-size: 25px;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+
+.text {
+    margin-left: 10px;
+}
+
+.options {
+    margin-left: auto;
+}
+
+.date {
+    margin-left: 25px;
+    font-size: 10px;
+}
+
+.link {
+    font-weight: 500;
+    cursor: pointer;
+}

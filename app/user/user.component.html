@@ -1,0 +1,11 @@
+<title>{{username}}</title>
+
+<div *ngIf="receivedData == true"> 
+    <h1 class="title">{{ username }}'s profile</h1>
+    <p class="text">this account was registered on {{ reg_date }} </p>
+    <p class="text"> and their permissions are {{ permissions }} </p>
+</div>
+
+
+
+<app-loader *ngIf="receivedData == null or receivedData == false"></app-loader>

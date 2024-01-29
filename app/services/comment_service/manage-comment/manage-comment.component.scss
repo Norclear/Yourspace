@@ -1,0 +1,23 @@
+.button:hover {
+    cursor: pointer;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+}
+
+.custom-dropdown-toggle {
+    background-color: transparent;
+    border-color: transparent;
+    width: 45px;
+    justify-content: center;
+    height: 70%;
+    margin-top: 2px;
+}
+
+.custom-dropdown-toggle img {
+    height: 95%;
+}

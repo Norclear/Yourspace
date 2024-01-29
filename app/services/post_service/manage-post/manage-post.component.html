@@ -1,0 +1,10 @@
+<div mdbDropdown class=" dropstart main">
+        <button class=" custom-dropdown-toggle" type="button" id="dropdownMenuButton" aria-expanded="false"
+            mdbDropdownToggle>
+            <img src="../../../assets/options.svg">
+        </button>
+    <ul mdbDropdownMenu class="dropdown-menu">
+        <li><a class="dropdown-item button" [routerLink]="['/post/' + post_id + '/edit']">Edit</a></li>
+        <li><a class="dropdown-item button" (click)="post_s.delete_post(token,post_id)">Delete</a></li>
+    </ul>
+</div>

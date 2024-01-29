@@ -1,0 +1,9 @@
+<title>{{title}}</title>
+
+<div class="main">
+    <form #admin="ngForm" (ngSubmit)="admin_s.delete_user(token,user)">
+        <input type="text" name="user" [(ngModel)]="user">
+        <input type="submit" value="delete">
+        <p id="error-text" class="error-text"></p>
+    </form>
+</div>
