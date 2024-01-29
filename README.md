@@ -10,11 +10,15 @@ port forwarding, domain names (and the api sub domain aswell), the SSL certifica
 
 This application uses a SQL database, Specifically MySQL and some some-what advanced SQL queries aswell as efficient database accessing using connection pooling.
 
-Thus the full-stack for this website looks like the following
+The api could defintely be more efficient through the use of data caching but will not be implemented into this app.
+
+Thus the full-stack for this website looks like the following;
 
 Angular 14 -> Nginx -> Python and FastAPI -> MySQL
 
 I do apologies in advanced to anybody trying to read this code if it is difficult becuase at this time there its very minimal documentation cuz I had no idea what I was doing when I made this.
 
-This website is hosted from my house, thus this means it uses my home network. Thus it is far from reliable and may be down at anytime, the backend does not automatically start beause I forgot to configure that.
+This website is hosted from my house, thus this means it uses my home network. Thus it is far from reliable and may be down at anytime, the backend does not automatically start because I forgot to configure that.
 If it is not currently up at the time of reading please email me at yesqwertynoqwerty@gmail.com or for any other enquiries.
+
+fyi, front end is found in the /src folder and backend in the /backend folder
