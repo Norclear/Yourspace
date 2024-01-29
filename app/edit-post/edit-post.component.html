@@ -1,0 +1,22 @@
+<title>Editing {{title}}</title>
+
+
+<div *ngIf="receviedData == true">
+    <div style="text-align: center;" class="center">
+        <h1 class="form-title">Edit Post</h1>
+        <form #postform="ngForm" (ngSubmit)="post_s.edit_post(token,post_id,postform.value.title,postform.value.description)">
+            <br>
+            <input [(ngModel)]="title" placeholder="Title (Required)" name="title" type="text" id="form"
+                class="form-control form-item" />
+            <br>
+            <textarea [(ngModel)]="description" class="form-control form-item textarea" name="description"
+                placeholder="Description (Required)" [value]="description" id="form" rows="4"></textarea>
+            <br>
+            <p id="error-text" class="error-text"></p>
+            <input type="submit" value="Edit Post">
+            <br>
+        </form>
+    </div>
+</div>
+
+<app-loader *ngIf="receviedData == null"> </app-loader>

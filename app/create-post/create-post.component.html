@@ -1,0 +1,31 @@
+<title>{{title}}</title>
+
+<div style="text-align: center;" class="center">
+    <h1 class="form-title">Create a Post</h1>
+    <form #postform="ngForm" (ngSubmit)="post_s.create_post(token, postform.value.title,postform.value.description,selectedFile,postform.value.privatePost)">
+        <br>
+        <input ngModel placeholder="Title (Required)" name="title" type="text" id="form" class="form-control form-item" value="" />
+        <br>
+        <textarea [(ngModel)]="description" class="form-control form-item textarea" name="description" placeholder="Description (Required)" id="form" rows="4"></textarea>
+        <br>
+        <div [class.hidden]="isLoaded">
+            <input #inputFile accept="image/jpeg, image/png" type="file" (change)="uploadImage($event)">
+            <p>Attach 1 image (Optional) Max 2MB</p>
+        </div>
+        <br>
+        <div class="img-container">
+            <img class="img" *ngIf="isLoaded"  [src]="selectedFileUrl" [alt]="selectedFile.name">
+            <img class="delete" (click)="removeImage()" [class.hidden]="!isLoaded" src="../../assets/delete_resource_icon.png">
+        </div>
+        <div class="form-check form-switch switch-div">
+            <input [(ngModel)]="privatePost" name="privatePost" mdbCheckbox class="form-check-input switch" type="checkbox" id="flexSwitchCheckDefault" />
+            <label class="form-check-label switch-text" for="flexSwitchCheckDefault">Private Post</label>
+        </div>
+        <br>
+        <p id="error-text" class="error-text"></p>
+        <input type="submit" value="Create Post">
+        <br>
+    </form>
+</div>
+<div style="height: 100px;"></div>
+<div class="fill"></div>

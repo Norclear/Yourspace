@@ -1,0 +1,43 @@
+.center {
+    margin: auto;
+    width: 60%;
+    min-width: 350px;
+    max-width: 1200px;
+    height: 40%;
+    min-height: 400px;
+    max-height: 550px;
+    padding: 10px;
+    transform: translateY(30%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.form-item {
+    min-width: 250;
+    width: 75%;
+    // max-width: 500px;
+    text-align: left;
+    margin: auto;
+    position: relative;
+}
+
+.error-text {
+    color: rgb(255, 96, 96);
+}
+
+.form-title {
+    font-size: 170%;
+}
+
+.textarea {
+    max-height: 150px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.fill {
+    height: 10%;
+}
