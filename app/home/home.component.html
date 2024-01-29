@@ -1,0 +1,11 @@
+<title>{{title}}</title>
+
+<div *ngIf="loggedIn">
+    <h1 id="username" class="username">{{ userData.username }}'s profile</h1>
+    <br>
+    <p class="text_1">only YOU can see this</p>
+    <br>
+    <p id="content" class="text_1">permission level: {{ userData.permissions }}; logged out automatically on time & date {{ userData.expiry }}; </p>
+</div>
+
+<app-loader *ngIf="loggedIn == null"></app-loader>

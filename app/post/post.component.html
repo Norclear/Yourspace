@@ -1,0 +1,35 @@
+<title>{{title}}</title>
+
+<app-loader *ngIf="receivedData == null"></app-loader>
+
+<div *ngIf="receivedData == true">
+    <h1 class="title" >{{title}}</h1>
+    <p class="description">{{description}}</p>
+    <div class="attachment" *ngIf="attachment">
+        <img [src]="attachment.src" alt="post_image_didn't load">
+    </div>
+    <div class="details">
+        <p class="owner-name">Posted by <p1 class="link" [routerLink]="['/user/' + ownerUsername]"> {{ownerUsername}} </p1>  </p>
+        <p class="date">On {{postDate}}</p>
+    </div>
+    <div  *ngIf="loggedIn">
+        <div class="comment-head">
+            <img class="comment-head-img" src="../../assets/add_comment.svg">
+            <h1 class="comment-head-title">Comment</h1>
+        </div>
+        <form #commentForm="ngForm"
+            (ngSubmit)="comment_s.create_comment(post_id,token,commentForm.value.comment_submit)">
+            <textarea (ngModel)="comment_submit" class="form-control form-item textarea" name="comment_submit"
+                placeholder="Comment" value=" " id="form" rows="4"></textarea>
+            <input class="submit" type="submit" name="submit" value="Comment">
+            <p id="error-text" class="error-text"></p>
+        </form>
+        <div *ngFor="let comment of comments">
+            <app-comment [user]="user_data.username" [id]="comment[0]" [comment]="comment[3]" [username]="comment[2]" [date]="comment[4]"></app-comment>
+        </div>
+
+    </div>
+
+    <div class="fill"></div>
+</div>
+

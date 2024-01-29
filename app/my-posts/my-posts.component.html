@@ -1,0 +1,17 @@
+<title>{{title}}</title>
+
+<div class="main">
+    <div *ngIf="returnedResult !== null">
+        <div id="postContainer" class="post-container">
+            <div *ngFor="let post of postResults " class="post">
+                <a class="post-title" [routerLink]="['/post/' + post.postId]"> {{ post.title }}</a>
+                <app-manage-post [post_id]="post.postId"></app-manage-post>
+                <p class="description"> {{ post.description }} </p>
+            </div>
+
+            <p *ngIf="returnedResult == false"> No post to be seen anywhere!</p>
+        </div>
+    </div>
+    <app-loader class="screen" *ngIf="returnedResult == null"></app-loader>
+    <div class="fill"> </div>
+</div>

@@ -1,0 +1,50 @@
+.button_1 {
+    background-color: rgb(255, 162, 0);
+}
+
+.button_2 {
+    display: flex;  
+    align-items: center;
+    color: rgb(255, 162, 0);
+    font-weight: 575;
+    height: 50%;
+    align-self: center;
+    width: 75px;
+    justify-content: center;
+}
+
+.pfp-container {
+    width: 64px;
+    height: 64px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.5fr;
+    width: fit-content;
+    float: right;
+}
+
+.custom-dropdown-toggle {
+    background-color: transparent;
+    border-color: transparent;
+    width: 45px;
+    justify-content: center;
+    height: 90%;
+}
+
+.custom-dropdown-toggle img {
+    opacity: 100%;
+}
+
+.button:hover {
+    cursor: pointer;
+}

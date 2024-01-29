@@ -1,0 +1,22 @@
+<title>{{title}}</title>
+
+<div class="container">
+    <div style="text-align: center;" class="center">
+        <h1 class="form-title">Login</h1>
+        <form #loginform="ngForm" (ngSubmit)="user_s.login(loginform.value.username,loginform.value.password)" novalidate>
+            <br>
+            <input ngModel placeholder="Username" name="username" type="text" id="form"
+                class="form-control form-item" />
+            <br>
+            <input ngModel placeholder="Password" name="password" type="password" id="form"
+                class="form-control form-item" />
+            <br>
+            <p id="error-text" class="error-text"></p>
+            <input type="submit" value="Login">
+            <br>
+            <br>
+            <a href="/signup">Sign Up here</a>
+        </form>
+    </div>
+    <div class="fill"></div>
+</div>

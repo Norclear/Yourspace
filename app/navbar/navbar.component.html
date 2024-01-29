@@ -1,0 +1,43 @@
+    <nav class="sticky-top navbar navbar-expand-lg navbar-light bg-light">
+        <!-- Container wrapper -->
+        <div class="container-fluid">
+            <!-- Toggle button -->
+            <button class="navbar-toggler" type="button" (click)="leftAligned.toggle()"
+                aria-controls="navbarLeftAlignExample" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div>
+                <a class="navbar-brand">
+                    <img src="../../assets/icon.png" class="icon" alt="" loading="lazy" />
+                    <a class="title-text" href="/">Yourspace</a>
+                </a>
+            </div>
+
+            <div class="center">
+                <a href="/posts" class="btn btn-primary me-3 button_1">Posts</a>
+            </div>
+
+            <!-- Collapsible wrapper -->
+            <div class="collapse navbar-collapse" id="navbarLeftAlignExample" mdbCollapse #leftAligned="mdbCollapse">
+                <!-- Left links -->
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link"></a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+                <!-- Search Bar -->
+                <app-search-bar></app-search-bar>
+                <!-- Search Bar -->
+                <!-- Navbar options -->
+                <app-navbar-buttons-authorised *ngIf="loggedIn == true"></app-navbar-buttons-authorised>
+                <app-navbar-buttons-unauthorised *ngIf="loggedIn == false"></app-navbar-buttons-unauthorised>
+                <app-loader *ngIf="loggedIn == null"></app-loader>
+                <!-- Navbar options -->
+            </div>
+            <!-- Collapsible wrapper -->
+        </div>
+        <!-- Container wrapper -->
+    </nav>
+

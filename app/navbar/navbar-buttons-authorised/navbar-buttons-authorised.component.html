@@ -1,0 +1,32 @@
+
+<!-- Login & Sign Up Buttons -->
+<div class="container">
+    <!-- <a type="button" href="/home" class="btn btn-link px-3 me-2 button_2">
+        Home
+    </a>
+    <a type="button" href="/post" class="btn btn-link px-3 me-2 button_2">
+        Post
+    </a> -->
+    
+    <div class="pfp-container">
+        <img [src]="pictureUrl">
+    </div>
+    <div mdbDropdown class="dropstart">
+        <button class=" custom-dropdown-toggle dropdown-toggle" type="button" id="dropdownMenuButton" aria-expanded="false"
+            mdbDropdownToggle>
+            <img src="../../../assets/menu_icon.svg">
+        </button>
+        <ul mdbDropdownMenu class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <li><a class="dropdown-item" href="/home">Home</a></li>
+            <li><a class="dropdown-item" href="/post">Create Post</a></li>
+            <li><a class="dropdown-item button"  (click)="navigate('home/posts')">My Posts</a></li>
+                <li>
+                    <hr class="dropdown-divider" />
+                </li>
+            <li><a class="dropdown-item button" (click)="logOut()">Log Out</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- Login & Sign Up Buttons -->
