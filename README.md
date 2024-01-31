@@ -6,9 +6,9 @@ Thus this project does not represent any of my personal ui skills (i suck at UI 
 The backend is created in python using the fast-API library. The yourspace API can be directly accessed without the UI via http://api.yourspace.space .
 
 I am running this on a Rockpi 5b and a linux ubuntu 20.04 Server LTS. This means I configured all networking on my own, i.e. Firewall rules, webserver (nginx btw),
-port forwarding, domain names (and the api sub domain aswell), the SSL certificate (thank you cert bot), server administration and other networking configurations and concepts.
+port forwarding, domain name configuration (and the api sub domain aswell), the SSL certificate (thank you cert bot), server administration and other networking configurations and concepts.
 
-This application uses a SQL database, Specifically MySQL and some some-what advanced SQL queries aswell as efficient database accessing using connection pooling.
+This application uses a SQL database, Specifically MySQL and some some-what advanced SQL queries aswell as efficient database querying using connection pooling.
 
 The api could defintely be more efficient through the use of data caching but will not be implemented into this app.
 
