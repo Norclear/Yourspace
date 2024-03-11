@@ -1,4 +1,4 @@
-Hello this is the code for the website https://yourspace.space
+Hello this is the source code for the website https://yourspace.space
 
 I made this as a pet project during my spare time using angular 14, typescript, html and css with certain ui modules taken from ng-bootstrap. 
 Thus this project does not represent any of my personal ui skills (i suck at UI and UX) but rather full stack development i.e. Front-end, back-end and networking.
