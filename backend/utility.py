@@ -8,6 +8,8 @@ import random
 from database import connection_pool, get_pfp
 import os
 
+# This is an important file, it contains all key utility functions that are crucial to the server.
+
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
@@ -53,7 +55,7 @@ def decompress_image(image_data, quality: int = 100):
 def random_hex_color():
     return ''.join(hex(random.randint(0, 15))[2:] for _ in range(6))
 
-#generate the unique user profile pictures using a random seet and the dice bear api and then save it to the filesystem
+#generate the unique user profile pictures using a random seed and the dice bear api and then save it to the filesystem
 def generate_pfp(seed):
     style = 'bottts'
     radius = 25

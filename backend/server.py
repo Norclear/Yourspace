@@ -4,10 +4,12 @@ from database import create_table,connection_pool
 from sql_models import user_table, post_table, comment_table
 from routers import user, authorise, post, filter, comment, admin
 
+# Initiate the fast api server.
 app = FastAPI()
 
 origins = ['*']
 
+# Set key properties such as request types and headers
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
@@ -16,13 +18,13 @@ app.add_middleware(
     allow_headers=['*']
 )
 
-
-create_table(connection_pool,user_table) # create the users table using the connection pool and the sql model from models.py
+# Attempt to create all required tables.
+create_table(connection_pool,user_table)
 create_table(connection_pool,post_table)
 create_table(connection_pool,comment_table)
 
 
-
+# Include routers to all sub routes for the api.
 app.include_router(user.router)
 app.include_router(authorise.router)
 app.include_router(post.router)
@@ -32,8 +34,8 @@ app.include_router(admin.router)
 
 
 
-
-@app.get("/", status_code=status.HTTP_200_OK)  # root url, will remain out of use .
+# The root url, has no purpose
+@app.get("/", status_code=status.HTTP_200_OK)
 def root():
     return {"Root url for Yourspace internal API"}
 

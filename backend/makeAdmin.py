@@ -1,6 +1,10 @@
 import mysql.connector
 
+# This is a separate python script tat can be run separately to make certain user's admin.
+# There is no gui, takes all required details as command line arguments.
+
 # database details
+# They have been hard coded but this file is not public and cannot be accessed by malicious users.. i think?
 database_hostname = "localhost"
 database_port = "3306"
 database_password = "local_Development747"
@@ -30,6 +34,7 @@ def update_permission(username, permission):
     # Close the connection
     connection.close()
 
+# This will take the command line arguments.
 if __name__ == "__main__":
     import sys
 

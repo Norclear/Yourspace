@@ -4,7 +4,7 @@ from typing import Optional
 
 from pydantic.types import conint
 
-
+# This is a base class for all posts
 class PostBase(BaseModel):
     title: str = None
     description: str = None
@@ -14,6 +14,7 @@ class PostBase(BaseModel):
 class PostCreate(PostBase):
     pass
 
+# Base class for JWT tokens
 class Token(BaseModel):
     token: str
 
@@ -35,7 +36,7 @@ class Post(PostBase):
     class Config:
         orm_mode = True
 
-
+# Class for the details of a post to be seen on the site
 class PostOut(BaseModel):
     Post: Post
     votes: int
@@ -43,18 +44,19 @@ class PostOut(BaseModel):
     class Config:
         orm_mode = True
 
+# Class for editing posts
 class PostEdit(BaseModel):
     title: str
     description: str
 
-
+# Class for creating new users, permissions are set to a default of 100.
 class UserCreate(BaseModel):
     username: str
     password: str
     permissions: int = 100
     pfp: str = None
 
-
+# Class for users logging in.
 class UserLogin(BaseModel):
     username: str
     password: str
