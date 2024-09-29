@@ -1,6 +1,6 @@
 import mysql.connector
 
-# This is a separate python script tat can be run separately to make certain user's admin.
+# This is a separate python script tat can be run separately to convert generic user accounts to admin accounts.
 # There is no gui, takes all required details as command line arguments.
 
 # database details
