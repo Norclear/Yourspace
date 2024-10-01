@@ -16,7 +16,8 @@ Thus the full-stack for this website looks like the following;
 
 Angular 14 -> Nginx -> Python and FastAPI -> MySQL
 
-I do apologies in advanced to anybody trying to read this code if it is difficult becuase at this time there its very minimal documentation cuz I had no idea what I was doing when I made this.
+~~I do apologies in advanced to anybody trying to read this code if it is difficult becuase at this time there its very minimal documentation because I had no idea what I was doing when I made this.~~
+Added some more comments !!
 
 This website is hosted from my house, thus this means it uses my home network. Thus it is far from reliable and may be down at anytime, the backend does not automatically start because I forgot to configure that.
 If it is not currently up at the time of reading please email me at yesqwertynoqwerty@gmail.com or for any other enquiries.
