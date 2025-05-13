@@ -1,15 +1,16 @@
 import mysql.connector
+import os
 
 # This is a separate python script tat can be run separately to convert generic user accounts to admin accounts.
 # There is no gui, takes all required details as command line arguments.
 
 # database details
-# They have been hard coded but this file is not public and cannot be accessed by malicious users.. i think?
-database_hostname = "localhost"
-database_port = "3306"
-database_password = "local_Development747"
-database_name = "yourspace"
-database_username = "root"
+# Get database details from environment variables
+database_hostname = os.getenv("DB_HOSTNAME")
+database_port = os.getenv("DB_PORT", "3306") # 3306 default port if the env var is not set
+database_username = os.getenv("DB_USERNAME")
+database_password = os.getenv("DB_PASSWORD")
+database_name = os.getenv("DB_NAME")
 
 def update_permission(username, permission):
     # Connect to the database
